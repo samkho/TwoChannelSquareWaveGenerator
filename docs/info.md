@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+Two 8-bit inputs, TA and TB, are used to reload internal countdown timers when they reach zero, at which time, respective outputs OUTA and OUTB are toggled.  A 2-bit SUM output is also provided as a convenience (SUM = OUTA + OUTB).
 
 ## How to test
 
-Explain how to use your project
+Apply arbitrary 8-bit reload values to TA (ui_in) and TB (uio_in).  Probe OUTA and OUTB with oscilloscope or logic analyzer.  Time period for outputs is proportional to (input+1); i.e. to get two waves with period T and period 2T, provide values like 3 and 7 (instead of 4 and 8).  Also check 2-bit output SUM (should be OUTA + OUTB, possibly delayed by one cycle).
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+External hardware not needed, but intent is to drive speakers (probably bring down voltage level via resistor dividers, then feed into speaker amplifier).
